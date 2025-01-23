@@ -1,0 +1,30 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.title {
+    font-weight: lighter;
+}
+
+.main-img {
+    box-shadow: 0px 2px 5px lightgray;
+}
+
+.left-col p {
+    color: #565959;
+}
+
+
+.right-col .book-desc {
+    font-weight: lighter;
+}
+
+.right-col a {
+    text-decoration-color: #007185;
+    color: #007185;
+}
+
+.container {
+    display: flex; 
+    gap: 20px;
+}
