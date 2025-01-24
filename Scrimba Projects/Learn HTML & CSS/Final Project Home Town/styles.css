@@ -9,13 +9,17 @@ DARK BLUE: #1D3557
 */
 
 body {
-    margin: 0;
     text-align: center;
 }
 
-img {
-    width: 100px;
+.activites h2 {
+    margin: 0;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    color: rgb(66, 87, 75);
 }
+
+
 
 .hero {
     background-image: url("images/tower.jpg");
@@ -39,8 +43,8 @@ img {
 }
 
 .title:hover {
-    transform: translateY(-15px); /* Moves the element 10px up */
-    transition: transform 0.5s ease-in-out; /* Smooth transition over 0.3 seconds */
+    transform: translateY(-15px); 
+    transition: transform 0.5s ease-in-out; 
 }
 
 .desc {
@@ -55,18 +59,63 @@ img {
 }
 
 .desc:hover {
-    transform: translateY(15px); /* Moves the element 10px up */
-    transition: transform 0.5s ease-in-out; /* Smooth transition over 0.3 seconds */
+    transform: translateY(15px);
+    transition: transform 0.5s ease-in-out; 
 }
 
-.activites{
+.activites {
     background-color: #beccb9;
-    height: 500px;
-    text-align: center;
+    padding: 50px 0;
+    text-align: center; 
 }
 
-.activites-imgs {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+.activites h2 {
+    margin-bottom: 30px; 
+    font-size: 24px; 
+    color: #1d3557; 
 }
+
+.activites .images {
+    display: flex;
+    justify-content: space-around; 
+    gap: 20px; 
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.activites img {
+    width: 180px; 
+    height: 180px; 
+    border-radius: 50%; 
+    object-fit: cover; 
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); 
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out; 
+}
+
+.activites img:hover {
+    transform: scale(1.2); 
+    box-shadow: 0px 6px 8px rgba(0, 0, 0, 0.2);
+}
+
+.activites .description {
+    display: flex;
+    justify-content: space-around;
+    max-width: 900px;
+    margin: 20px auto 0;
+    gap: 20px;
+    font-size: large;
+    color: white;
+    text-shadow: 0px 0px 1px black;
+}
+
+.activites .description div {
+    text-align: center; 
+    max-width: 200px;
+}
+
+.activites .description div p {
+    font-size: 16px; 
+    color: #457b9d; 
+}
+
+
