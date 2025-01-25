@@ -1,20 +1,33 @@
-# Getting Started
-Install the dependencies and run the project in watch mode
-```
-npm install
-npm run build # or watch to rebuild on change
-open index.html
-```
-Note that using Webpack is obselete and this archive has been provided
-for compatibility reasons. Prefer using Vite, check it at https://vitejs.dev
-## About Scrimba
+# ♠ JavaScript Blackjack Game 
 
-At Scrimba our goal is to create the best possible coding school at the cost of a gym membership! 💜
-If we succeed with this, it will give anyone who wants to become a software developer a realistic shot at succeeding, regardless of where they live and the size of their wallets 🎉
-The Frontend Developer Career Path aims to teach you everything you need to become a Junior Developer, or you could take a deep-dive with one of our advanced courses 🚀
+This is a simple Blackjack game implemented in JavaScript, created as part of the "Learn JavaScript" course on Scrimba. The game introduces various foundational concepts in JavaScript such as methods, object-oriented programming (OOP), conditionals, number randomization, and proper bug fixing.
 
-- [Our courses](https://scrimba.com/allcourses)
-- [The Frontend Career Path](https://scrimba.com/learn/frontend)
-- [Become a Scrimba Pro member](https://scrimba.com/pricing)
+## Features
 
-Happy Coding!
+- **Blackjack Game Logic**: The player is dealt cards and must try to get as close to 21 as possible without going over.
+- **Player Object**: The player's information (name and chips) is encapsulated in an object to demonstrate basic OOP principles.
+- **Card Randomization**: The cards are drawn randomly, and the deck is simulated to ensure a unique experience every time.
+- **Game Flow**: The game has checks for whether the player has won, lost, or has a blackjack, with dynamic updates to the player's chip count.
+- **Bug Fixing**: The game was developed with a focus on debugging, ensuring a smooth and bug-free user experience.
+
+## Technologies Used
+
+- **HTML** for structuring the page.
+- **CSS** for styling the game interface.
+- **JavaScript** for game logic, event handling, and dynamic updates.
+
+## How to Play
+
+1. Start the game by clicking the "Start Game" button.
+2. The player will be dealt two cards.
+3. The player can choose to **"draw new card"** or **"Stay"** (end the turn).
+4. The goal is to get as close to 21 as possible without exceeding it.
+5. If the player's hand exceeds 21, they lose.
+6. If the player gets 21 with the first two cards, they win with a **Blackjack**.
+7. The player's chip count is updated after each round.
+
+## Setup
+
+1. Clone this repository to your local machine:
+   ```bash
+   git clone https://github.com/your-username/js-blackjack-game.git
