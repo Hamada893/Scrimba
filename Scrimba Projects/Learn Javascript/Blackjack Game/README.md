@@ -31,3 +31,15 @@ This is a simple Blackjack game implemented in JavaScript, created as part of th
 1. Clone this repository to your local machine:
    ```bash
    git clone https://github.com/your-username/js-blackjack-game.git
+
+2. Open the index.html file in your browser to start playing.
+
+
+## License
+This project is licensed under the MIT License.
+
+Acknowledgments
+Scrimba's "Learn JavaScript" course for providing the foundation for this project.
+The Blackjack community for the rules and game logic inspiration.
+
+Feel free to update any specific details such as your GitHub username or links, and let me know if you'd like to add anything else!
