@@ -9,9 +9,7 @@ body {
     margin: 0;
 }
 
-.container {
-    text-align: center;
-}
+
 
 .btn {
     background-color: #22c55e; 
@@ -22,20 +20,17 @@ body {
     border-radius: 8px;
     cursor: pointer;
     position: relative; 
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3); 
 }
 
-.btn::after {
-    content: "";
-    position: absolute;
-    bottom: -6px;
-    left: 10%;
-    width: 80%;
-    height: 4px;
-    background: linear-gradient(to right, rgba(255, 255, 255, 0.1), rgba(0, 0, 0, 0.2));
-    border-radius: 2px;
+.line  {
+    margin-top: 30px;
+    background-color: #22c55e;
+    width: 350px;
+    border-bottom: 3px solid #22c55e;
 }
 
 .green-text {
     color: #22c55e;
 }
+
+
