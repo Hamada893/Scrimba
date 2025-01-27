@@ -6,6 +6,10 @@ Welcome to the foundational projects repository for Scrimba! This repository ser
 
 Started on the 20th of December, this course was taken to brush up on the fundamentals of HTML and CSS, serving as a strong foundation for more advanced learning. By revisiting essential concepts, the goal was to ensure a solid grasp of these core web technologies, paving the way for a smoother transition into the Learn JavaScript course. This journey represents an important step toward mastering front-end development and eventually learning React, which will enable the creation of dynamic, modern web interfaces. While the primary focus is on web development, there is also a possibility of branching into app development in the future.
 
+## Certificate
+![Learn HTML & CSS](Certificates/htmlCssCertificate.png)
+
+
 ## 🧠 Learn JavaScript (🔃 In Progress):
 
 Started on the 24th of December, this course introduces fundamental programming concepts like conditionals, loops, methods, and object-oriented programming (OOP). This course is an exciting step in learning JavaScript, focusing on problem-solving, bug fixing, and foundational techniques for building dynamic applications. Progress includes completing several interactive projects, such as a password generator, Blackjack game, and randomized emoji picker. These projects not only solidify understanding of core JavaScript concepts but also emphasize practical application, helping to build confidence in coding independently. As the journey unfolds, this course aims to lay the groundwork for becoming proficient in JavaScript, with the ultimate goal of transitioning to more advanced frameworks like React and beyond. 🚀
