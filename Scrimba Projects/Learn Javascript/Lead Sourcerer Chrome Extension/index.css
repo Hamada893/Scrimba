@@ -17,25 +17,29 @@ button {
     background: #5f9341;
     color: white;
     padding: 10px 20px;
-    border: none;
+    border: 1px solid #5f9341;
     font-weight: bold;
 }
 
+/* Style the button according to the provided design */
 
-/* STYLE THE LIST ACCORDING TO THE DESIGN */
+#delete-btn {
+    background-color: white;
+    color: #5f9341;
+}
+
 ul {
-    padding: none;
-    padding-left: 0px;
     margin-top: 20px;
+    list-style: none;
+    padding-left: 0;
 }
 
 li {
-    list-style: none;
+    margin-top: 5px;
 }
 
 a {
-    color: #5F9341;
-    text-align: start;
-    padding: none;
+    color: #5f9341;
 }
+
 
