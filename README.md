@@ -7,7 +7,7 @@ Welcome to the foundational projects repository for Scrimba! This repository ser
 Started on the 20th of December, this course was taken to brush up on the fundamentals of HTML and CSS, serving as a strong foundation for more advanced learning. By revisiting essential concepts, the goal was to ensure a solid grasp of these core web technologies, paving the way for a smoother transition into the Learn JavaScript course. This journey represents an important step toward mastering front-end development and eventually learning React, which will enable the creation of dynamic, modern web interfaces. While the primary focus is on web development, there is also a possibility of branching into app development in the future.
 
 ## Certificate
-![Learn HTML & CSS](Certificates/htmlCssCertificate.png)
+[![Learn HTML & CSS](Certificates/htmlCssCertificate.png)](https://scrimba.com/learn-html-and-css-c0p)
 
 
 ## 🧠 Learn JavaScript (🔃 In Progress):
