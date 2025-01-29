@@ -10,6 +10,9 @@ Started on the 20th of December, this course was taken to brush up on the fundam
 [![Learn HTML & CSS](Certificates/htmlCssCertificate.png)](https://scrimba.com/learn-html-and-css-c0p)
 
 
-## 🧠 Learn JavaScript (🔃 In Progress):
+## 🧠 Learn JavaScript (✅ Completed):
 
 Started on the 24th of December, this course introduces fundamental programming concepts like conditionals, loops, methods, and object-oriented programming (OOP). This course is an exciting step in learning JavaScript, focusing on problem-solving, bug fixing, and foundational techniques for building dynamic applications. Progress includes completing several interactive projects, such as a password generator, Blackjack game, and randomized emoji picker. These projects not only solidify understanding of core JavaScript concepts but also emphasize practical application, helping to build confidence in coding independently. As the journey unfolds, this course aims to lay the groundwork for becoming proficient in JavaScript, with the ultimate goal of transitioning to more advanced frameworks like React and beyond. 🚀
+
+## Certificate
+[![Learn Javascript](Certificates/JScertificate.png)](https://scrimba.com/learn-javascript-c0v)
