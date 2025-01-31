@@ -18,7 +18,7 @@ Started on the 24th of December, this course introduces fundamental programming 
 [![Learn Javascript](Certificates/JScertificate.png)](https://scrimba.com/learn-javascript-c0v)
 
 ## 💻 Front-End Developer Career Path (🔃 In Progress):
-Started on the 31st of January, this comprehensive program is designed to build a strong foundation in front-end development, covering HTML, CSS, JavaScript, React, UI/UX principles, and more. Through a hands-on, project-based approach, this course emphasizes real-world coding challenges, problem-solving, and best practices for modern web development.
+Started on the 31st of January, this comprehensive program is designed to build a strong foundation in front-end development, covering HTML, CSS, JavaScript, React, UI/UX principles, accessible web development rules , and more. Through a hands-on, project-based approach, this course emphasizes real-world coding challenges, problem-solving, and best practices for modern web development.
 
 Progress includes completing multiple interactive projects, such as responsive websites, interactive web apps, and dynamic UI components. These projects not only reinforce key front-end concepts but also provide practical experience in writing clean, maintainable code.
 
