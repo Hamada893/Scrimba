@@ -23,3 +23,9 @@ Started on the 31st of January, this comprehensive program is designed to build 
 Progress includes completing multiple interactive projects, such as responsive websites, interactive web apps, and dynamic UI components. These projects not only reinforce key front-end concepts but also provide practical experience in writing clean, maintainable code.
 
 As the journey continues, the goal is to solidify front-end skills, create a polished portfolio, and gain the confidence to work on professional-grade applications. This path serves as a stepping stone toward becoming a well-rounded front-end developer, ready to dive into frameworks like React and beyond. 🚀
+
+### - 🧑‍🏫 Learn Accessible Web Development (✅ Completed on 7th Feb):
+This course focused on making websites accessible to all users, ensuring that websites can be used by people with disabilities. Topics covered include keyboard navigation, screen reader compatibility, and designing with accessibility in mind. By completing this course, I gained a deeper understanding of how to create websites that are inclusive and provide an equal experience to all users, regardless of their abilities.
+
+## Certificate
+[![Learn Accessible Web Development](Certificates/AccWebDevCertificate.png)](https://scrimba.com/learn-accessible-web-design-c031)
