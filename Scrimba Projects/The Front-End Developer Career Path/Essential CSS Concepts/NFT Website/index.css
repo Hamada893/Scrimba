@@ -1,12 +1,13 @@
 body{
-     font-size: 16px;
-     color: #2b283a;
-     font-family: 'Roboto', sans-serif;
- }
+    font-size: 16px;
+    color: #2b283a;
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+}
 
 header{
     background-color: #5f29a3;
-    padding: 45px 0px;
+    padding: 45px 0;
 }
 
 h1{
@@ -18,5 +19,19 @@ h1{
 h3{
     color: #d0aaff;
     font-size: 20px;
-    margin: 0;
+    margin:0;
 }
+
+section{
+    padding: 45px 0;
+}
+
+/* 
+Challenge:
+1. Create a "section" selector and give it the 
+   same padding as the header.
+2. In index.html, find the image of the purple 
+   sneakers and attach a class to it. 
+3. Make it so this image takes up 100% 
+   of the section width.
+*/
