@@ -10,15 +10,6 @@ header{
     padding: 45px 0;
 }
 
-/* 
-Challenge:
-1. Add CSS so the text in the first section 
-   renders correctly. 
-⚠️ Watch out for the amount of white space 
-   you have between the start of the section 
-   and the h2.
-⚠️ Don't write too much code!
-*/
 
 h1{
     color: whitesmoke;
@@ -43,4 +34,13 @@ section{
 
 .main-image{
     width: 100%;
+}
+
+.p1-link {
+    color: #ef5839;
+    text-decoration: underline dotted;
+}
+
+.p1-link:hover, .p1-link:active {
+    color: #d4b44c;
 }
