@@ -3,3 +3,20 @@ body{
      color: #2b283a;
      font-family: 'Roboto', sans-serif;
  }
+
+header{
+    background-color: #5f29a3;
+    padding: 45px 0px;
+}
+
+h1{
+    color: whitesmoke;
+    font-size: 36px;
+    margin: 0;
+}
+
+h3{
+    color: #d0aaff;
+    font-size: 20px;
+    margin: 0;
+}
