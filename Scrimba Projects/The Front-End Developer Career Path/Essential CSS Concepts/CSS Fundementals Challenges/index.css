@@ -3,23 +3,25 @@ body {
     font-family: 'Roboto', sans-serif;
     font-size: 21px;
     font-weight: 300;
-}
-
-.container span {
-    font-weight: 900;
-}
-
-h1 span {
-    font-size: 80px;
-}
-
-h2 span {
-    font-size: 60px;
+    margin: 0;
 }
 
 .container {
     width: 570px;
-    margin: 0 auto;
+    margin: 0px auto;
+}
+
+.bold-text {
+    font-weight: 900;
+    display: block;
+}
+
+h1 .bold-text {
+    font-size: 80px;
+}
+
+h2 .bold-text {
+    font-size: 60px;
 }
 
 h1,
@@ -40,15 +42,33 @@ h3 {
     font-weight: 900;
 }
 
-.small-text {
-    font-size: 16px;
-}
-
 a {
     color: #99D930;
     font-weight: 900;
 }
 
-a:hover {
+a:hover,
+a:focus {
     color: #131313;
+}
+
+.small-text {
+    font-size: 16px;
+} 
+
+.hero-section, .occupation-section, .desc-section {
+    padding: 100px;
+    width: 100%;
+}
+
+.hero-section {
+    background-color: #D7D7D7;
+}
+
+.occupation-section {
+    background-color: #FFEAEA;
+}
+
+.desc-section {
+    background-color: #EAF9FF;
 }
