@@ -49,14 +49,31 @@ p {
     margin-bottom: 0;
 }
 
-a {
+.small-link {
     color: #99D930;
     font-weight: 900;
 }
 
-a:hover,
-a:focus {
+.small-link:hover,
+.small-link:focus {
     color: #131313;
+}
+
+.btn-style {
+    color: #252525;
+    background-color: #99D930;
+    text-decoration: none;
+    display: inline-block;
+    margin-top: 35px;
+    padding: 20px 25px;
+    font-weight: 900;
+    border-radius: 3.5px;
+}
+
+.btn-style:hover,
+.btn-style:focus {
+    color: #fff;
+    background-color: #252525;
 }
 
 .small-text {
