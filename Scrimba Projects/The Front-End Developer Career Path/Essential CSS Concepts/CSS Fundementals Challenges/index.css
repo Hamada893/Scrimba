@@ -8,7 +8,7 @@ body {
 
 .container {
     width: 570px;
-    margin: 0px auto;
+    margin: 0 auto;
 }
 
 .bold-text {
@@ -26,7 +26,7 @@ h2 .bold-text {
 
 h1,
 h2 {
-    font-weight: 300;
+    font-weight: 300; 
 }
 
 h1 {
@@ -56,19 +56,12 @@ a:focus {
     font-size: 16px;
 } 
 
-.hero-section, .occupation-section, .desc-section {
-    padding: 100px;
-    width: 100%;
+header,
+section {
+    padding: 100px 0;
 }
 
-.hero-section {
-    background-color: #D7D7D7;
-}
-
-.occupation-section {
-    background-color: #FFEAEA;
-}
-
-.desc-section {
-    background-color: #EAF9FF;
+.header-footer-background {
+    background-color: #252525;
+    color: #FFF;
 }
