@@ -42,3 +42,7 @@ h1 {
 p {
     margin: 10px 25px;
 }
+
+img {
+    width: 100%;
+}
