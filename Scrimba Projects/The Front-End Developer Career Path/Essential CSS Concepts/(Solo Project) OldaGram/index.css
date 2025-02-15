@@ -1,5 +1,77 @@
 html, body {
     margin: 0;
     padding: 0;
+    text-align: center;
+    background-color: #e6e6e0; /* Off-white background */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
 }
 
+.phone-container {
+    width: 450px;
+    height: 90%;
+    background: white;
+    border-radius: 20px;
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.2);
+    border: 7px solid #1c1c1c;
+    overflow: hidden;
+}
+
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    border-bottom: 2px solid gainsboro;
+}
+
+.logo {
+    width: 140px;
+    max-width: 100%; 
+}
+
+.user-avatar {
+    width: 50px;
+    border-radius: 50%;
+}
+
+.uploader-information {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    text-align: left;
+}
+
+.uploader-avatar {
+    width: 50px;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+.post-image img {
+    width: 100%;
+    display: block;
+}
+
+.post-interaction-container {
+    display: flex;
+    gap: 10px;
+    padding-left: 20px;
+    padding-top: 20px;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.post-interaction {
+    width: 30px;
+    max-width: 100%; 
+}
+
+.post-footer {
+    padding-left: 10px;
+    text-align: left;
+    padding-left: 20px;
+
+}
