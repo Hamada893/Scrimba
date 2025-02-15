@@ -28,3 +28,17 @@ const posts = [
     }
 ]
 
+let likeEl = document.getElementById("likes");
+let heartEls = document.getElementsByClassName("heart"); // This returns a collection of all heart elements
+
+let likeCount = 21492;
+
+function like() {
+    likeCount++; 
+    likeEl.querySelector("strong").textContent = likeCount; // Update the number inside <strong> tag
+}
+
+// Loop through all heart elements and attach event listeners
+for (let heartEl of heartEls) {
+    heartEl.addEventListener("click", like);
+}
