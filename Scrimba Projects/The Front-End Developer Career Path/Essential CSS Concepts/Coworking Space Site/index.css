@@ -33,8 +33,8 @@ li {
 }
 
 .align-right {
-margin-left: auto;
-}
+    margin-left: auto;
+} 
 
 h1 {
     font-size: 40px;
@@ -44,8 +44,25 @@ h1 {
 
 .item-img {
     width: 100%;
+    position: relative;
 }
 
 .caption {
     margin: 0 25px;
 }
+
+.img-banner {
+/*
+Challenge:
+1. Position the image banner at the top left 
+   of the first image as per the slide. What
+   CSS do you need to add to the parent 
+   element to make this work?
+*/ 
+    background-color: #cd6858;
+    color: whitesmoke;
+    padding: 10px;
+    position: absolute;
+    top: 317px;
+}
+
