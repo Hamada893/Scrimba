@@ -42,26 +42,44 @@ h1 {
     margin: 30px 25px;
 }
 
-.caption {
-    margin: 0 25px;
-}
-
 .item {
-    position: relative; 
-    display: inline-block; 
+    position: relative;
 }
 
 .item-img {
-    width: 100%;
     display: block;
+    width: 100%;
 }
 
-.img-banner {
+.caption {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    margin: 0 25px;
+}
+
+.img-banner { 
+    position: absolute;
+    top: 0;
+    left: 0;
     background-color: #cd6858;
     color: whitesmoke;
     padding: 10px;
-    position: absolute;
-    top: 0; 
-    left: 0;
+} 
+
+button {
+/*
+Challenge:
+1. Centrally align the button on the 
+   vertical axis so it looks like the 
+   screenshot on the slide.
+*/
+    border: none;
+    background-color: #cd6858;
+    color: whitesmoke;
+    padding: 10px 15px;
+    font-weight: 700;
+    cursor: pointer;
+    margin: auto;
 }
 
