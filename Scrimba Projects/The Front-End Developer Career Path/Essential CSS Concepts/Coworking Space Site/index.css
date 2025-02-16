@@ -78,6 +78,9 @@ button {
 }
 
 .chatbox-bg {
+    position: fixed;
+    bottom: 6px;
+    right: 6px;
     background-color: #dda15e;
     width: 40px;
     height: 40px;
@@ -88,12 +91,7 @@ button {
 }
 
 .chatbox-img {
-    margin: auto;
-/*
-Challenge:
-1. Center the speech bubble image inside
-   the circle.  
-*/
+   margin: auto;
    width: 50%; 
 }
 
