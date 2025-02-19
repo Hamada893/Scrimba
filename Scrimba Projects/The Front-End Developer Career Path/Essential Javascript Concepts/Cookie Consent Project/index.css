@@ -65,13 +65,21 @@ main{
 /* modal */
   
 .modal {
-    display: none;
+    
+/*
+Challenge:
+1. Make the modal sit on top of the other content. 
+2. Make sure it is centrally aligned both horizontally
+   and vertically (just like in the slide).
+3. When it's positioned correctly, set its display 
+   property to 'none'.
+*/
     position: fixed;
-    right: 0;
-    left: 0;
-    top: 0;
-    bottom: 0;
-    margin: auto;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: none;
+    z-index: 1;
     height: 420px;
     width: 350px;
     border-radius: 5px;
