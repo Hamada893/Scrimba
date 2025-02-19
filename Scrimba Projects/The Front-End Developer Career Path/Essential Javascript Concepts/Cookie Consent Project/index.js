@@ -3,6 +3,8 @@ const modalCloseBtn = document.getElementById('modal-close-btn')
 const consentForm = document.getElementById('consent-form')
 const modalText = document.getElementById('modal-text')
 
+modalCloseBtn.disabled = true
+
 setTimeout(function(){
     modal.style.display = 'inline'
 }, 1500)
@@ -15,18 +17,7 @@ consentForm.addEventListener('submit', function(e){
     e.preventDefault()
     
     const consentFormData = new FormData(consentForm)
-    console.log(consentFormData)
-
-/*   
-Challenge: 
-1. Create a const to store the user's name and
-   use a FormData method to extract the 
-   submitted name from the FormData object.
-2. Insert the user's name into the HTML string
-   that contains the final message we show our
-   users.
-*/ 
-    const userName = consentFormData.get('fullName')
+    const fullName = consentFormData.get('fullName')
     
     modalText.innerHTML = `
     <div class="modal-inner-loading">
@@ -39,15 +30,22 @@ Challenge:
         Making the sale...`
     }, 1500)
     
-    
+/*   
+Challenge: 
+1. Make the button that closes the modal disabled.
+2. Make that button become usable when the final 
+   modal message has been displayed to the user.
+*/ 
+
     setTimeout(function(){
         document.getElementById('modal-inner').innerHTML = `
-        <h2>Thanks <span class="modal-display-name">${userName}</span>, you sucker! </h2>
+        <h2>Thanks <span class="modal-display-name">${fullName}</span>, you sucker! </h2>
         <p>We just sold the rights to your eternal soul.</p>
         <div class="idiot-gif">
             <img src="images/pirate.gif">
         </div>
     `
+    modalCloseBtn.disabled = false
     }, 3000)
   
 }) 
