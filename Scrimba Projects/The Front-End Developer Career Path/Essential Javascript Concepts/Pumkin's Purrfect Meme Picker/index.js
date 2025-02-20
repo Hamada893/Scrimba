@@ -179,14 +179,14 @@ Challenge:
 3. At the end of the function, log out the 
    const holding the new array.
 */ 
-const newEmotion = []
+const emotionsArray = []
     for (let cat of cats){
         for (let emotion of cat.emotionTags){
-            newEmotion.push(emotion)
+            emotionsArray.push(emotion)
         }
         
     }
-    console.log(newEmotion)
+    return emotionsArray
 }
 
 getEmotionsArray(catsData)
