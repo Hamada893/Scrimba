@@ -179,26 +179,34 @@ function getEmotionsArray(cats){
     return emotionsArray
 }
 
-function renderEmotionsRadios(cats){
+const emotionRadios = document.getElementById('emotion-radios')
+
 /*
 Challenge:
-1. Have the new function "renderEmotionsRadios" 
-   take in a single parameter. Name that parameter
-   "cats". 
-2. Inside renderEmotionsRadios, set up a const called 
-   "emotions" and set it equals to whatever is returned 
-   by calling getEmotionsArray, passing in "cats" as an 
-   argument.
-3. For now, renderEmotionsRadios should just log out 
-   "emotions".
-4. Call renderEmotionsRadios passing in catsData.
-*/
-const emotions = getEmotionsArray(cats)
-console.log(emotions)
+1. Take control of the 'emotion-radios' div.
+2. In renderEmotionsRadios, set up a let 
+   to hold our string of HTML. You can initialise
+   it with an empty string.
+3. Iterate over "emotions" and put each emotion 
+   in a <p> tag and then add them to the let you 
+   created in step 2. 
+4. Render the string to the 'emotion-radios' div.
+*/ 
+
+function renderEmotionsRadios(cats){
+    const emotions = getEmotionsArray(cats)
+    console.log(emotions)
+    let htmlParagraph = ''
+    for (let emotion of emotions){
+        htmlParagraph += `<div>
+                    <input type="radio" id="${emotion}" name="emotion" value="${emotion}">
+                    <label for="${emotion}">${emotion}</label>
+                </div>`
+    }
+    emotionRadios.innerHTML = htmlParagraph
 }
 
 renderEmotionsRadios(catsData)
-
 
 
 
