@@ -195,7 +195,6 @@ Challenge:
 
 function renderEmotionsRadios(cats){
     const emotions = getEmotionsArray(cats)
-    console.log(emotions)
     let htmlParagraph = ''
     for (let emotion of emotions){
         htmlParagraph += `<div>
