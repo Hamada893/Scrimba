@@ -170,19 +170,30 @@ const catsData = [
 ]
 
 function getEmotionsArray(cats){
+/*
+Challenge:
+1. Set up a const and initialise it with 
+   an empty array.
+2. Instead of logging out each emotion, 
+   push each one to the new array.
+3. At the end of the function, log out the 
+   const holding the new array.
+*/ 
+const newEmotion = []
     for (let cat of cats){
+        for (let emotion of cat.emotionTags){
+            newEmotion.push(emotion)
+        }
+        
+    }
+    console.log(newEmotion)
+}
+
+getEmotionsArray(catsData)
+
 /*
 Challenge:
 1. Add a nested "for of" to log out just 
    the emotions from the emotionTags array 
    in each object.
 */ 
-        for (let emotion of cat.emotionTags) {
-            console.log(emotion)
-        }
-        
-    }
-}
-
-getEmotionsArray(catsData)
-
