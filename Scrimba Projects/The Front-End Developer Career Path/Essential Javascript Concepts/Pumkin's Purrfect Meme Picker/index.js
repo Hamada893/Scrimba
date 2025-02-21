@@ -12,13 +12,18 @@ function highlightCheckedOption(e){
     for (let radio of radios){
         radio.classList.remove('highlight')
     }
-    // remove all instances of the highlight class
     document.getElementById(e.target.id).parentElement.classList.add('highlight')
-}
+} 
 
 function getMatchingCatsArray(){
+
+const selectedEmotionElement = document.querySelector('input[type="radio"]:checked')
+
+if (selectedEmotionElement){
     const selectedEmotion = document.querySelector('input[type="radio"]:checked').value
     console.log(selectedEmotion)
+}
+    
 }
 
 function getEmotionsArray(cats){
