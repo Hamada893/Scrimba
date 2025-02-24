@@ -7,7 +7,6 @@ tweetBtn.addEventListener('click', function(){
 })
 
 function getFeedHtml(){
-    
     let feedHtml = ``
     
     tweetsData.forEach(function(tweet){
@@ -20,12 +19,15 @@ function getFeedHtml(){
             <p class="tweet-text">${tweet.tweetText}</p>
             <div class="tweet-details">
                 <span class="tweet-detail">
+                    <i class="fa-regular fa-comment-dots"></i>
                     ${tweet.replies.length}
                 </span>
                 <span class="tweet-detail">
+                    <i class="fa-solid fa-heart"></i>
                     ${tweet.likes}
                 </span>
                 <span class="tweet-detail">
+                    <i class="fa-solid fa-retweet"></i>
                     ${tweet.retweets}
                 </span>
             </div>   
@@ -39,7 +41,6 @@ function getFeedHtml(){
 
 function render(){
     document.getElementById('feed').innerHTML = getFeedHtml()
-
 }
 
 render()
