@@ -7,9 +7,12 @@ tweetBtn.addEventListener('click', function(){
 })
 
 document.addEventListener('click', function(e){
-
-console.log(e.target.dataset.like)
+    console.log('like', e.target.dataset.like)
 })
+
+function handleLikeClick(){
+    
+}
 
 function getFeedHtml(){
     let feedHtml = ``
