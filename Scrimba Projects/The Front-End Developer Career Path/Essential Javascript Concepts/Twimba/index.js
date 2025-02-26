@@ -14,8 +14,9 @@ if (e.target.dataset.like) {
 }
 })
 
-function handleLikeClick(){
+function handleLikeClick(tweetId){
 
+console.log(tweetId)
 }
 
 function getFeedHtml(){
