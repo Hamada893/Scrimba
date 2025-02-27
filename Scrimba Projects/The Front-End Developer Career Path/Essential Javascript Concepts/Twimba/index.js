@@ -17,15 +17,18 @@ function handleLikeClick(tweetId){
         return tweet.uuid === tweetId
     })[0]
 
-
-    if (!targetTweetObj.isLiked){
-        targetTweetObj.likes++
+    if (targetTweetObj.isLiked){
+        targetTweetObj.likes--
     }
     else{
-        targetTweetObj.likes--
+        targetTweetObj.likes++ 
     }
     targetTweetObj.isLiked = !targetTweetObj.isLiked
     render()
+}
+
+function handleRetweetClick(tweetId){
+    
 }
 
 function getFeedHtml(){
