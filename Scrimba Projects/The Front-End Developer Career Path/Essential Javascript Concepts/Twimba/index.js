@@ -7,16 +7,22 @@ tweetBtn.addEventListener('click', function(){
 })
 
 document.addEventListener('click', function(e){
-    console.log('like', e.target.dataset.like)
-
-if (e.target.dataset.like) {
-    handleLikeClick(e.target.dataset.like)
-}
+    if(e.target.dataset.like){
+       handleLikeClick(e.target.dataset.like) 
+    }
 })
 
 function handleLikeClick(tweetId){
+    console.log(tweetId)
 
-console.log(tweetId)
+const filteredTweets = tweetsData.filter(tweet => tweet.uuid === tweetId)
+const targetTweetObj = filteredTweets[0]
+
+if (targetTweetObj){
+    targetTweetObj.likes += 1
+    console.log(targetTweetObj)
+}
+
 }
 
 function getFeedHtml(){
