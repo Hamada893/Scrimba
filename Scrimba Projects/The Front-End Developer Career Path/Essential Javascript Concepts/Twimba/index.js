@@ -1,6 +1,12 @@
 import { tweetsData } from './data.js'
 import { v4 as uuidv4 } from 'https://jspm.dev/uuid';
 
+/*
+Challenge:
+3. We could improve index.js by moving one line
+   of code to a better position. Find it and move it!
+*/
+
 const tweetInput = document.getElementById('tweet-input')
 
 document.addEventListener('click', function(e){
@@ -54,18 +60,22 @@ function handleReplyClick(replyId){
 
 function handleTweetBtnClick(){
 
-    tweetsData.unshift({
-        handle: `@Scrimba`,
-        profilePic: `images/scrimbalogo.png`,
-        likes: 0,
-        retweets: 0,
-        tweetText: tweetInput.value,
-        replies: [],
-        isLiked: false,
-        isRetweeted: false,
-        uuid: uuidv4()
-    })
+    if(tweetInput.value){
+        tweetsData.unshift({
+            handle: `@Scrimba`,
+            profilePic: `images/scrimbalogo.png`,
+            likes: 0,
+            retweets: 0,
+            tweetText: tweetInput.value,
+            replies: [],
+            isLiked: false,
+            isRetweeted: false,
+            uuid: uuidv4()
+        })
     render()
+    tweetInput.value = ''
+    }
+
 }
 
 function getFeedHtml(){
