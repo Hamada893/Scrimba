@@ -7,8 +7,6 @@ Challenge:
    of code to a better position. Find it and move it!
 */
 
-const tweetInput = document.getElementById('tweet-input')
-
 document.addEventListener('click', function(e){
     if(e.target.dataset.like){
        handleLikeClick(e.target.dataset.like) 
@@ -59,6 +57,7 @@ function handleReplyClick(replyId){
 }
 
 function handleTweetBtnClick(){
+    const tweetInput = document.getElementById('tweet-input')
 
     if(tweetInput.value){
         tweetsData.unshift({
