@@ -93,10 +93,16 @@ a:active {
 
 /* ----- LAYOUT ----- */
 
+/*
+  Challenge:
+   1. Convert the padding of header, section, and footer from px to em
+   2. Convert the bottom-margin of .main-image from px to em
+*/
+
 header, 
 section, 
 footer {
-    padding: 46px 0;
+    padding: 2.875em 0;
 }
 
 header, 
@@ -118,7 +124,7 @@ header,
     width: 100%;
     display: block;
     max-width: 640px;
-    margin: 0 auto 32px;
+    margin: 0 auto 2em;
 }
 
 .section-two-image-container {
