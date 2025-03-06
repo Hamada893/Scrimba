@@ -107,12 +107,24 @@ header,
 
 .container {
     width: 90%;
-    margin: 0 auto;
     max-width: 800px;
+    border: 2px solid tomato;
+    margin: 0 auto;
 }
+
+/*
+  Challenge:
+   1. Apply a maximum width to .main-image
+   2. Make the image slightly narrower than 
+     its container and center it on the page 
+*/
 
 .main-image {
     width: 100%;
+    max-width: 530px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
     margin-bottom: 32px;
 }
 
