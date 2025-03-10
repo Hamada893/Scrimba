@@ -60,7 +60,7 @@ Challenge:
     .physics { 
         grid-column: 1 / 4;
     }
-    
+
     .health {
         grid-column: 4 / 10;
     }
