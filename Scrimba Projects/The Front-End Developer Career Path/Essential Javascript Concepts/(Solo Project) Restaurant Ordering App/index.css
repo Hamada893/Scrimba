@@ -1,8 +1,7 @@
 /* General */
+
 * {
     margin: 0;
-    padding: 0;
-    box-sizing: border-box;
 }
 
 body {
@@ -14,10 +13,10 @@ body {
     font-family: 'Arial', sans-serif;
 }
 
-/* Container */
+/* Containers */
 .container {
-    width: 450px;
-    height: 780px;
+    width: 490px;
+    height: 900px;
     background-color: white;
     border-radius: 30px;
     box-shadow: 0 20px 20px rgba(0, 0, 0, 0.15);
@@ -26,35 +25,95 @@ body {
     overflow: hidden;
 }
 
+#menu {
+    display: flex;
+    flex-direction: column;
+}
+
+.menu-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px;
+    border-bottom: 1px solid #ddd;
+    margin-top: 1.5em;
+    margin-left: 1.8em;
+    margin-right: 1.8em;
+    padding-bottom: 2em;
+}
+
+.order-menu {
+    margin-left: 1.8em;
+    margin-right: 1.8em;
+}
+
+.added-items {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  
+  .item-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+  }
+
+  .item-name-section {
+    display: flex;
+    align-items: center;
+    flex-grow: 1; 
+  }
+  
+  .item-row button { 
+    margin-left: 0.5em;
+    color: rgb(179, 179, 179);
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+  }
+
+
+
 /* Banner */
 .banner-image {
     width: 100%;
-    height: 25%;
+    height: 17%;
     object-fit: cover;
     border-top-left-radius: 30px;
     border-top-right-radius: 30px;
 }
 
-/* Menu */
-#menu {
-    display: flex;
-    flex-direction: column;
-    margin-top: 20px;
-    padding: 0 20px;
-    gap: 20px;
+
+/* Typography */
+
+.order-title {
+    text-align: center;
+    margin-top: 1.5em;
+    margin-bottom: 1em;
+    font-size: 1.1rem;
 }
 
-.food-items-container {
+.order-total-price {
+    border-top: 2px solid #333;
+    margin: 1.2em 0;
+    padding-top: 1em;
+}
+
+.item-info {
     display: flex;
     align-items: center;
-    justify-content: space-between;
-    border-bottom: 1px solid #ccc;
-    padding-bottom: 15px;
-    padding-top: 15px;
+    gap: 0.8em; 
 }
 
 .item-emoji {
-    font-size: 3rem;
+    font-size: 4rem;
+}
+
+.item-text {
+    display: flex;
+    flex-direction: column;
 }
 
 .item-name {
@@ -66,16 +125,17 @@ body {
 .item-ingredients {
     font-size: 0.9rem;
     color: gray;
-    margin-top: 3px;
+    margin-top: 1px;
 }
 
 .item-price {
     font-size: 1rem;
     font-weight: bold;
-    margin-top: 5px;
+    margin-top: 15px;
 }
 
-.increment-btn {
+/* Buttons */
+#increment-btn {
     font-size: 1.5rem;
     border: 1px solid #ccc;
     background: none;
@@ -89,6 +149,6 @@ body {
     transition: background-color 0.3s ease;
 }
 
-.increment-btn:hover {
+#increment-btn:hover {
     background-color: #f0f0f0;
 }
