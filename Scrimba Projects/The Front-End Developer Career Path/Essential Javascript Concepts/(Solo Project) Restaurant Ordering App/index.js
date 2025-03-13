@@ -4,6 +4,7 @@ const orderMenu = document.getElementById('order-menu')
 const menuContainer = document.getElementById('menu')
 const cardDetailsModal = document.getElementById('card-details-modal')
 const payBtn = document.getElementById('pay-btn')
+const thanksMsg = document.getElementById('thanks-msg')
 
 let menuItems = ``
 let orderedItems = [] // Store selected items
@@ -94,3 +95,12 @@ function removeItem(event) {
 document.querySelectorAll('.increment-btn').forEach(button => {
   button.addEventListener('click', increment)
 })
+
+payBtn.addEventListener('click', function(e){
+  e.preventDefault()
+  thanksMsg.style.visibility = 'visible'
+  cardDetailsModal.style.display = 'none'
+  orderMenu.style.display = 'none'
+})
+
+
