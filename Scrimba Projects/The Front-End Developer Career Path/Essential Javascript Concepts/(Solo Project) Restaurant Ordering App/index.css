@@ -192,6 +192,22 @@ body {
     margin-top: 1px;
 }
 
+#thanks-msg {
+    display: flex;
+    color: #05523c;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    background-color: #ECFDF5;
+    margin-top: 2em;
+    height: 90px;
+    width: 430px;
+    margin-left: auto;
+    margin-right: auto;
+    font-weight: 700;
+    visibility: hidden;
+}
+
 .item-price {
     font-size: 1rem;
     font-weight: bold;
@@ -222,7 +238,7 @@ body {
     text-align: center;
     margin-top: 1.5em;
     width: 100%;
-    height: 3.8em;
+    height: 4em;
     color: white;
     background-color: #15DB99;
     border: none;
