@@ -1,89 +1,105 @@
-import { menuArray } from './data.js';
+import { catsData } from '/data.js'
 
-const orderMenu = document.getElementById('order-menu');
-const menuContainer = document.getElementById('menu');
+const emotionRadios = document.getElementById('emotion-radios')
+const getImageBtn = document.getElementById('get-image-btn')
+const gifsOnlyOption = document.getElementById('gifs-only-option')
+const memeModalInner = document.getElementById('meme-modal-inner')
+const memeModal = document.getElementById('meme-modal')
+const memeModalCloseBtn = document.getElementById('meme-modal-close-btn')
 
-let menuItems = ``;
-let orderedItems = []; // Store selected items
+emotionRadios.addEventListener('change', highlightCheckedOption)
 
-// Create the menu items dynamically
-menuArray.forEach((item, index) => {
-  menuItems += `
-    <div class="menu-item">
-        <div class="item-info">
-            <p class='item-emoji'>${item.emoji}</p> 
-            <div class="item-text">
-                <p class='item-name'>${item.name}</p>
-                <p class='item-ingredients'>${item.ingredients.join(", ")}</p>  
-                <p class='item-price'>$${item.price}</p>  
-            </div>
-        </div>
-        <button class='increment-btn' data-index="${index}">+</button>
-    </div>
-  `;
-});
+memeModalCloseBtn.addEventListener('click', closeModal)
 
-// Inject menu items into the DOM
-menuContainer.innerHTML = menuItems;
+getImageBtn.addEventListener('click', renderCat)
 
-// Function to update the order menu
-function updateOrderMenu() {
-  if (orderedItems.length === 0) {
-    orderMenu.style.visibility = 'hidden'; // Hide if empty
-    return;
-  }
-
-  let totalPrice = orderedItems.reduce((sum, item) => sum + (item.price * item.quantity), 0);
-  
-  orderMenu.innerHTML = `
-    <p class="order-title">Your Order</p>
-    <div class="added-items">
-      ${orderedItems.map((item, index) => `
-        <div class="item-row">
-          <div class="item-name-section">
-            <p>${item.name} (x${item.quantity})</p>
-            <button class="remove-btn" data-index="${index}">remove</button>
-          </div>
-          <p>$${(item.price * item.quantity).toFixed(2)}</p>
-        </div>
-      `).join('')}
-    </div>
-    <div class="order-total-price">
-      <strong>Total: $${totalPrice.toFixed(2)}</strong>
-    </div>
-    <button class="complete-order-btn">Complete Order</button>
-  `;
-
-  orderMenu.style.visibility = 'visible'; // Show menu when an item is added
-
-  // Attach event listeners to remove buttons
-  document.querySelectorAll('.remove-btn').forEach(button => {
-    button.addEventListener('click', removeItem);
-  });
+function highlightCheckedOption(e){
+    const radios = document.getElementsByClassName('radio')
+    for (let radio of radios){
+        radio.classList.remove('highlight')
+    }
+    document.getElementById(e.target.id).parentElement.classList.add('highlight')
 }
 
-// Function to add or increase quantity of items
-function increment(event) {
-  const index = event.target.dataset.index;
-  const existingItem = orderedItems.find(item => item.id === menuArray[index].id);
-
-  if (existingItem) {
-    existingItem.quantity++; // Increase quantity instead of adding a duplicate
-  } else {
-    orderedItems.push({ ...menuArray[index], quantity: 1 }); // Add new item with quantity
-  }
-
-  updateOrderMenu();
+function closeModal(){
+    memeModal.style.display = 'none'
 }
 
-// Function to remove an item
-function removeItem(event) {
-  const index = event.target.dataset.index;
-  orderedItems.splice(index, 1); // Remove item from array
-  updateOrderMenu();
+function renderCat(){
+    const catObject = getSingleCatObject()
+    memeModalInner.innerHTML =  `
+        <img 
+        class="cat-img" 
+        src="./images/${catObject.image}"
+        alt="${catObject.alt}"
+        >
+        `
+    memeModal.style.display = 'flex'
 }
 
-// Attach event listeners to the increment buttons
-document.querySelectorAll('.increment-btn').forEach(button => {
-  button.addEventListener('click', increment);
-});
+function getSingleCatObject(){
+    const catsArray = getMatchingCatsArray()
+    
+    if(catsArray.length === 1){
+        return catsArray[0]
+    }
+    else{
+        const randomNumber = Math.floor(Math.random() * catsArray.length)
+        return catsArray[randomNumber]
+    }
+}
+
+function getMatchingCatsArray(){     
+    if(document.querySelector('input[type="radio"]:checked')){
+        const selectedEmotion = document.querySelector('input[type="radio"]:checked').value
+        const isGif = gifsOnlyOption.checked
+        
+        const matchingCatsArray = catsData.filter(function(cat){
+            
+            if(isGif){
+                return cat.emotionTags.includes(selectedEmotion) && cat.isGif
+            }
+            else{
+                return cat.emotionTags.includes(selectedEmotion)
+            }            
+        })
+        return matchingCatsArray 
+    }  
+}
+
+function getEmotionsArray(cats){
+    const emotionsArray = []    
+    for (let cat of cats){
+        for (let emotion of cat.emotionTags){
+            if (!emotionsArray.includes(emotion)){
+                emotionsArray.push(emotion)
+            }
+        }
+    }
+    return emotionsArray
+}
+
+function renderEmotionsRadios(cats){
+        
+    let radioItems = ``
+    const emotions = getEmotionsArray(cats)
+    for (let emotion of emotions){
+        radioItems += `
+        <div class="radio">
+            <label for="${emotion}">${emotion}</label>
+            <input
+            type="radio"
+            id="${emotion}"
+            value="${emotion}"
+            name="emotions"
+            >
+        </div>`
+    }
+    emotionRadios.innerHTML = radioItems
+}
+
+renderEmotionsRadios(catsData)
+
+
+
+
