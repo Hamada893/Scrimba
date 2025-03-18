@@ -1,19 +1,37 @@
-# Getting Started
-Install the dependencies and run the project
-```
-npm install
-npm start
-```
+# BlogSpace
 
-Head over to https://vitejs.dev/ to learn more about configuring vite
-## About Scrimba
+BlogSpace is a simple blog application that fetches filler posts from an API and allows users to create new posts, which are then rendered on the webpage in real-time. This project demonstrates fundamental concepts of making HTTP requests and interacting with RESTful APIs.
 
-At Scrimba our goal is to create the best possible coding school at the cost of a gym membership! 💜
-If we succeed with this, it will give anyone who wants to become a software developer a realistic shot at succeeding, regardless of where they live and the size of their wallets 🎉
-The Frontend Developer Career Path aims to teach you everything you need to become a Junior Developer, or you could take a deep-dive with one of our advanced courses 🚀
+## Features
+- Fetches blog posts from an API.
+- Allows users to "POST" new blog entries to the database.
+- Renders new posts dynamically on the webpage.
+- Demonstrates real-time updates with API interactions.
 
-- [Our courses](https://scrimba.com/allcourses)
-- [The Frontend Career Path](https://scrimba.com/learn/frontend)
-- [Become a Scrimba Pro member](https://scrimba.com/pricing)
+## Concepts Learned
+This project covered the following key concepts:
+- **HTTPS Requests** – Making GET and POST requests.
+- **URLs & Endpoints** – Understanding API structure and how to target specific resources.
+- **Methods** – Using HTTP methods like `GET` and `POST`.
+- **Body** – Sending data in the request body when creating new posts.
+- **Header** – Configuring request headers for API interactions.
+- **REST APIs** – Communicating with APIs following RESTful principles.
+- **Resources** – Understanding API resources such as blog posts.
+- **Parameters & Queries** – Modifying API calls with query parameters.
 
-Happy Coding!
+## Installation & Usage
+1. Clone this repository:
+   ```sh
+   git clone https://github.com/yourusername/BlogSpace.git
+   cd BlogSpace
+   ```
+2. Open `index.html` in your browser or use a local server.
+3. Enjoy fetching and posting blog entries!
+
+## Technologies Used
+- JavaScript (Fetch API)
+- HTML & CSS
+- JSONPlaceholder API (or any other mock API service)
+
+## License
+This project is licensed under the MIT License.
