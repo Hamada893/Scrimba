@@ -2,6 +2,7 @@ let deckId
 const cardsContainer = document.getElementById("cards")
 const newDeckBtn = document.getElementById("new-deck")
 const drawCardBtn = document.getElementById("draw-cards")
+const header = document.getElementById("header")
 
 function handleClick() {
     fetch("https://apis.scrimba.com/deckofcards/api/deck/new/shuffle/")
@@ -25,7 +26,7 @@ drawCardBtn.addEventListener("click", () => {
                 <img src=${data.cards[1].image} class="card" />
             `
             const winnerText = determineCardWinner(data.cards[0], data.cards[1])
-            console.log(winnerText)
+            header.textContent = winnerText
         })
 })
 /**
