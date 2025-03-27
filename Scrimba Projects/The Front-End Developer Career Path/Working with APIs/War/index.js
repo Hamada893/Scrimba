@@ -8,6 +8,7 @@ function handleClick() {
         .then(res => res.json())
         .then(data => {
             deckId = data.deck_id
+            console.log(deckId)
         })
 }
 
@@ -23,6 +24,8 @@ drawCardBtn.addEventListener("click", () => {
             cardsContainer.children[1].innerHTML = `
                 <img src=${data.cards[1].image} class="card" />
             `
+            const winnerText = determineCardWinner(data.cards[0], data.cards[1])
+            console.log(winnerText)
         })
 })
 /**
@@ -46,15 +49,13 @@ function determineCardWinner(card1, card2) {
     "10", "JACK", "QUEEN", "KING", "ACE"]
     const card1ValueIndex = valueOptions.indexOf(card1.value)
     const card2ValueIndex = valueOptions.indexOf(card2.value)
-    console.log("card 1:", card1ValueIndex)
-    console.log("card 2:", card2ValueIndex)
     
     if (card1ValueIndex > card2ValueIndex) {
-        console.log("Card 1 wins!")
+        return "Card 1 wins!"
     } else if (card1ValueIndex < card2ValueIndex) {
-        console.log("Card 2 wins!")
+        return "Card 2 wins!"
     } else {
-        console.log("War!")
+        return "War!"
     }
 }
 
