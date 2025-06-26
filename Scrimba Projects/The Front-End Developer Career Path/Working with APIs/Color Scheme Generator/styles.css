@@ -1,5 +1,5 @@
 body {
-  background-color: #f8fafc;
+  background-color: #0f172a;
   color: rgb(48, 48, 48);
   font-family: Arial, sans-serif;
   display: flex;
@@ -10,14 +10,15 @@ body {
 }
 
 .main-container {
+  background-color: #ffffff;
   display: flex;
   flex-direction: column;
   align-items: center;
-  border: 5px solid rgb(66, 66, 66);
-  border-radius: 10px;
-  padding: 2rem;
+  border: 6px solid #334155;
+  border-radius: 20px;
   height: 85vh;
-  width: 40%;
+  width:45%;
+  box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.5);
 }
 
 .picker-container {
@@ -36,7 +37,6 @@ body {
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
-  border: 5px solid rgb(46, 230, 0);
   border-radius: 10px;
   padding: 2rem;
   width: 100%;
@@ -46,8 +46,31 @@ body {
 .color-box {
   width: 100%;
   height: 100%;
-  border: 5px solid rgb(255, 0, 0);
+  background-color: rgb(0, 153, 255);
+}
+
+.color-codes-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
   border-radius: 10px;
+  width: 100%;
+  height: 5%;
+  margin-bottom: 1em;
+}
+
+.color-code {
+  width: 100%;
+  height: 100%;
+  
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.color-code-text {
+  font-weight: 600;
+  cursor: default;
 }
 
 h1 {
