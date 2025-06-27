@@ -93,6 +93,15 @@ h1 {
   cursor: pointer;
   padding: 15px 11px;
   white-space: nowrap;
+  transition: background-color, transform, font-weight 0.3s ease-in-out;
+  transition: box-shadow 0.1s ease-in-out;
+}
+
+#get-color-scheme-btn:hover {
+  background-color: #f0f0f0;
+  transform: scale(1.05);
+  box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.5);
+  font-weight: 600;
 }
 
 #color-scheme-dropdown {
