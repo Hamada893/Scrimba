@@ -1,5 +1,5 @@
 body {
-  background-color: #0f172a;
+  background-color: #ffffff;
   color: rgb(48, 48, 48);
   font-family: Arial, sans-serif;
   font-weight: 600;
@@ -15,11 +15,11 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  border: 6px solid #334155;
+  border: 6px solid #06d6a0;
   border-radius: 20px;
   height: 85vh;
   width:45%;
-  box-shadow: 0 0 20px 0 rgba(177, 177, 177, 0.5);
+  box-shadow: 0 0 10px 0 rgba(3, 3, 3, 0.5);
 }
 
 .picker-container {
@@ -49,25 +49,7 @@ body {
   height: 100%;
 }
 
-.color-box-1 {
-  background-color: #f55a5a;
-}
 
-.color-box-2 {
-  background-color: #2b283a;
-}
-
-.color-box-3 {
-  background-color: #fbf3ab;
-}
-
-.color-box-4 {
-  background-color: #aad1b6;
-}
-
-.color-box-5 {
-  background-color: #a626d3;
-}
 
 .color-codes-container {
   display: flex;
