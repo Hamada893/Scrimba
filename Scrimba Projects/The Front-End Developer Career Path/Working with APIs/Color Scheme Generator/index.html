@@ -9,9 +9,11 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
 </head>
-<body>
+<body> 
   <div class="main-container">
-    <h1>Color Scheme Generator<span class="green-dot">.</span></h1>
+    <div class="header-container">
+      <h1>Color Scheme Generator<span class="green-dot">.</span></h1>
+    </div>
     <div class="picker-container">
       <input type="color" class="subtle-shadow" id="color-picker" placeholder="Enter a color">
       <select name="Color Scheme" class="subtle-shadow" id="color-scheme-dropdown">
@@ -23,7 +25,19 @@
         <option value="analogic-complement">Analogic-complement</option>
         <option value="triad">Triad</option>
       </select>
-      <button id="get-color-scheme-btn" class="subtle-shadow">Get Color Scheme</button>
+      <button id="get-color-scheme-btn" class="button button-item">
+        <span class="button-bg">
+          <span class="button-bg-layers">
+            <span class="button-bg-layer button-bg-layer-1 -purple"></span>
+            <span class="button-bg-layer button-bg-layer-2 -turquoise"></span>
+            <span class="button-bg-layer button-bg-layer-3 -yellow"></span>
+          </span>
+        </span>
+        <span class="button-inner">
+          <span class="button-inner-static">Get Color Scheme</span>
+          <span class="button-inner-hover">Get Color Scheme</span>
+        </span>
+      </button>
     </div>
 
     <div class="colors-container">

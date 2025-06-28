@@ -10,6 +10,16 @@ body {
   margin: 0;
 }
 
+.header-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 20%;
+  gap: 1em;
+}
+
 .main-container {
   background-color: #ffffff;
   display: flex;
@@ -29,8 +39,8 @@ body {
   justify-content: space-between;
   border-radius: 10px;
   padding: 2rem;
-  width: 60%;
-  gap: 0.9em;
+  width: 80%;
+  gap: 1.5em;
 }
 
 .colors-container {
@@ -85,36 +95,161 @@ h1 {
   color: #08c208;
 }
 
-#get-color-scheme-btn {
-  background-color: #ffffff;
-  color: rgb(41, 41, 41);
-  border: 1px solid #d8d8d8;
-  border-radius: 4px;
-  cursor: pointer;
-  padding: 15px 11px;
-  white-space: nowrap;
-  transition: background-color, transform, font-weight 0.3s ease-in-out;
-  transition: box-shadow 0.1s ease-in-out;
+/* From Uiverse.io by OliverZeros */ 
+button {
+  all: unset;
 }
 
-#get-color-scheme-btn:hover {
-  background-color: #f0f0f0;
-  transform: scale(1.05);
-  box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.5);
-  font-weight: 600;
+.button {
+  position: relative;
+  display: inline-flex;
+  height: 3.5rem;
+  width: 30%;
+  align-items: center;
+  border-radius: 7px;
+  text-wrap: nowrap;
+  padding-left: 2rem;
+  padding-right: 2rem;
+  font-family: Segoe UI;
+  font-size: 1.2rem;
+  font-weight: 640;
+  color: #fafaf6;
+  letter-spacing: -0.06em;
+  cursor: pointer;
+  border: 1px solid #d8d8d8;
 }
+
+.button-item {
+  background-color: transparent;
+  color: #1d1d1f;
+  transition: transform 1.8s cubic-bezier(0.19, 1, 0.22, 1);
+}
+
+.button-item:hover {
+  color: #ffffff;
+}
+
+.button-item .button-bg {
+  border-color: rgba(255, 208, 116);
+  background-color: rgb(255, 255, 255);
+}
+
+.button-inner,
+.button-inner-hover,
+.button-inner-static {
+  pointer-events: none;
+  display: block;
+}
+
+.button-inner {
+  position: relative;
+}
+
+.button-inner-hover {
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  transform: translateY(70%);
+}
+
+.button-bg {
+  overflow: hidden;
+  border-radius: 7px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  transform: scale(1);
+  transition: transform 1.8s cubic-bezier(0.19, 1, 0.22, 1);
+}
+
+.button-bg,
+.button-bg-layer,
+.button-bg-layers {
+  display: block;
+}
+
+.button-bg-layers {
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%);
+  top: -60%;
+  aspect-ratio: 1 / 1;
+  width: max(200%, 10rem);
+}
+
+.button-bg-layer {
+  border-radius: 15px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  transform: scale(0);
+}
+
+.button-bg-layer.-purple {
+  background-color: rgba(163, 116, 255);
+}
+
+.button-bg-layer.-turquoise {
+  background-color: rgba(23, 241, 209);
+}
+
+.button-bg-layer.-yellow {
+  background-color: rgb(0, 0, 0);
+}
+
+.button:hover .button-inner-static {
+  opacity: 0;
+  transform: translateY(-70%);
+  transition:
+    transform 1.4s cubic-bezier(0.19, 1, 0.22, 1),
+    opacity 0.3s linear;
+}
+
+.button:hover .button-inner-hover {
+  opacity: 1;
+  transform: translateY(0);
+  transition:
+    transform 1.4s cubic-bezier(0.19, 1, 0.22, 1),
+    opacity 1.4s cubic-bezier(0.19, 1, 0.22, 1);
+}
+
+.button:hover .button-bg-layer {
+  transition:
+    transform 1.3s cubic-bezier(0.19, 1, 0.22, 1),
+    opacity 0.3s linear;
+}
+
+.button:hover .button-bg-layer-1 {
+  transform: scale(1);
+}
+
+.button:hover .button-bg-layer-2 {
+  transition-delay: 0.1s;
+  transform: scale(1);
+}
+
+.button:hover .button-bg-layer-3 {
+  transition-delay: 0.2s;
+  transform: scale(1);
+}
+
 
 #color-scheme-dropdown {
   padding: 15px 8px;
   color: rgb(41, 41, 41);
   border: 1px solid #d8d8d8;
   border-radius: 10px;
-  width: 100%;
+  width: 70%;
 }
 
 #color-picker {
   height: 100%;
-  width: 24%;
+  width: 20%;
   color: rgb(41, 41, 41);
   border: 0px solid #d8d8d8;
 }
@@ -122,3 +257,7 @@ h1 {
 .subtle-shadow {
   box-shadow: 0 0 1px 0 rgba(0, 0, 0, 0.5);
 }
+
+
+
+
