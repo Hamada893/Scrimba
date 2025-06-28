@@ -258,6 +258,53 @@ button {
   box-shadow: 0 0 1px 0 rgba(0, 0, 0, 0.5);
 }
 
+/* Github button */
 
+.github-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px 15px;
+  gap: 15px;
+  background-color: #181717;
+  outline: 3px #181717 solid;
+  outline-offset: -3px;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+  transition: 400ms;
+}
 
+.github-button .text {
+  color: white;
+  font-weight: 700;
+  font-size: 1em;
+  transition: 400ms;
+}
 
+.github-button svg path {
+  transition: 400ms;
+}
+
+.github-button:hover {
+  background-color: transparent;
+}
+
+.github-button:hover .text {
+  color: #181717;
+}
+
+.github-button:hover svg path {
+  fill: #181717;
+}
+
+a {
+  text-decoration: none;
+}
+
+.github-button-container {
+  position: fixed;
+  bottom: 20px;
+  left: 20px;
+  z-index: 1000;
+}
