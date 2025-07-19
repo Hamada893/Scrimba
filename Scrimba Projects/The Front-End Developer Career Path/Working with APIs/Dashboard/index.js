@@ -11,14 +11,23 @@ fetch("https://apis.scrimba.com/unsplash/photos/random?orientation=landscape&que
 		document.getElementById("author").textContent = `By: Dodi Achmad`
     })
 
-/**
- * Challenge: Pull down the cryptocurrency data for dogecoin from the 
- * CoinGecko API and log it to the console
- * 
- * Also add a .catch() method to console any errors that might occur to the console
- */
-
 fetch("https://api.coingecko.com/api/v3/coins/dogecoin")
-    .then(res => res.json())
-    .then(data => console.log(data))
+    .then(res => {
+        if (!res.ok) {
+            throw Error("Something went wrong")
+        }
+        return res.json()
+    })
+    .then(data => {
+        /**
+         * Challenge: Add the name and icon of the cryptocurrency
+         * to the upper-left of the dashboard page
+         * 
+         * Use `data.name` and `data.image.small` to access that info
+         */
+        document.getElementById("crypto-top").innerHTML = `
+            <img src=${data.image.small} />
+            <span>${data.name}</span>
+        `
+    })
     .catch(err => console.error(err))
