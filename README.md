@@ -27,7 +27,7 @@ This course focused on making websites accessible to all users, ensuring that we
 Earned on the 7th of July, this course covered seven essential principles that form the foundation of effective user interface design: white space (strategic use of empty space to create breathing room and guide user attention), color (understanding color theory and psychology in digital interfaces), contrast (creating sufficient visual distinction for readability and accessibility), scale (using size relationships to establish hierarchy and emphasis), alignment (organizing elements in a structured manner to create visual order), typography (selecting and implementing fonts effectively for both aesthetics and user experience), and visual hierarchy (structuring information to guide users through content in order of importance). These seven fundamentals work together to create cohesive, user-friendly interfaces that are both functional and visually appealing.
 
 ## Certificate
-[![Learn Accessible Web Development](Certificates/AccWebDevCertificate.png)](https://scrimba.com/learn-accessible-web-design-c031)
+[![Intro to UI Design Fundementals](Certificates/UiDesignCertificate.png)](https://scrimba.com/intro-to-ui-design-fundamentals-c0q)
 
 
 
