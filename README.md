@@ -17,11 +17,20 @@ Started on the 24th of January, this course introduces fundamental programming c
 ## Certificate
 [![Learn Javascript](Certificates/JScertificate.png)](https://scrimba.com/learn-javascript-c0v)
 
-### - 🧑‍🏫 Learn Accessible Web Development (✅ Completed on 7th Feb, 2025):
+## 🧑‍🏫 Learn Accessible Web Development (✅ Completed on 7th Feb, 2025):
 This course focused on making websites accessible to all users, ensuring that websites can be used by people with disabilities. Topics covered include keyboard navigation, screen reader compatibility, and designing with accessibility in mind. By completing this course, I gained a deeper understanding of how to create websites that are inclusive and provide an equal experience to all users, regardless of their abilities.
 
 ## Certificate
 [![Learn Accessible Web Development](Certificates/AccWebDevCertificate.png)](https://scrimba.com/learn-accessible-web-design-c031)
+
+## 🧪 Intro to UI Design Fundementals (✅ Completed on 7th July, 2025):
+Earned on the 7th of July, this course covered seven essential principles that form the foundation of effective user interface design: white space (strategic use of empty space to create breathing room and guide user attention), color (understanding color theory and psychology in digital interfaces), contrast (creating sufficient visual distinction for readability and accessibility), scale (using size relationships to establish hierarchy and emphasis), alignment (organizing elements in a structured manner to create visual order), typography (selecting and implementing fonts effectively for both aesthetics and user experience), and visual hierarchy (structuring information to guide users through content in order of importance). These seven fundamentals work together to create cohesive, user-friendly interfaces that are both functional and visually appealing.
+
+## Certificate
+[![Learn Accessible Web Development](Certificates/AccWebDevCertificate.png)](https://scrimba.com/learn-accessible-web-design-c031)
+
+
+
 
 ## 💻 Front-End Developer Career Path (🔃 In Progress):
 Started on the 31st of January, this comprehensive program is designed to build a strong foundation in front-end development, covering HTML, CSS, JavaScript, React, UI/UX principles, accessible web development rules , and much much more. Through a hands-on, project-based approach, this course emphasizes real-world coding challenges, problem-solving, and best practices for modern web development with 31 total projects.
