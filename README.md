@@ -27,9 +27,16 @@ This course focused on making websites accessible to all users, ensuring that we
 Earned on the 7th of July, this course covered seven essential principles that form the foundation of effective user interface design: white space (strategic use of empty space to create breathing room and guide user attention), color (understanding color theory and psychology in digital interfaces), contrast (creating sufficient visual distinction for readability and accessibility), scale (using size relationships to establish hierarchy and emphasis), alignment (organizing elements in a structured manner to create visual order), typography (selecting and implementing fonts effectively for both aesthetics and user experience), and visual hierarchy (structuring information to guide users through content in order of importance). These seven fundamentals work together to create cohesive, user-friendly interfaces that are both functional and visually appealing.
 
 ## Certificate
-[![Intro to UI Design Fundementals](Certificates/UiDesignCertificate.png)](https://scrimba.com/intro-to-ui-design-fundamentals-c0q)
+[![Intro to UI Design Fundementals](Certificates/UiDesignCertificate.png)](https://scrimba.com/intro-to-ui-design-fundamentals-c0q) 
 
+## ⚙️ Advanced JavaScript (✅ Completed on 29th July, 2025):
+Completed on the 29th of July, this course offered a deep dive into core and advanced JavaScript concepts critical for writing clean, efficient, and scalable code. It began with an expanded understanding of array methods such as .map(), .forEach(), and others, alongside refined use of object destructuring to simplify code structure. The course also clarified distinctions between function expressions, inline functions, and arrow functions - especially how they influence the this keyword in different contexts - and introduced default parameters and fallback patterns to write more defensive code.
 
+A significant focus was placed on asynchronous JavaScript, explaining how to overcome callback hell using Promises and async/await syntax. Object-oriented programming principles were reinforced through the creation of custom objects using constructors and ES6 classes, including inheritance, polymorphism, and the use of private fields for encapsulation.
+
+The course also introduced powerful intermediate concepts such as closures, Immediately Invoked Function Expressions (IIFEs), and functional techniques like currying, debouncing, and throttling. It concluded with a focus on generators and recursion, showcasing how these patterns can be used to solve complex problems elegantly and efficiently.
+
+[![Advanced Javascript](Certificates/AdvancedJS.png)](https://scrimba.com/advanced-javascript-c03kpi3kss)
 
 
 ## 💻 Front-End Developer Career Path (🔃 In Progress):
