@@ -1,19 +1,31 @@
-# Getting Started
-Install the dependencies and run the project
-```
-npm install
-npm start
-```
+# 🌏 Travel Journal
 
-Head over to https://vitejs.dev/ to learn more about configuring vite
-## About Scrimba
+A simple React app that displays travel destinations in a clean, card-style layout. Each entry includes an image, location, Google Maps link, travel dates, and a short description.
 
-At Scrimba our goal is to create the best possible coding school at the cost of a gym membership! 💜
-If we succeed with this, it will give anyone who wants to become a software developer a realistic shot at succeeding, regardless of where they live and the size of their wallets 🎉
-The Fullstack Developer Path aims to teach you everything you need to become a Junior Developer, or you could take a deep-dive with one of our advanced courses 🚀
+---
 
-- [Our courses](https://scrimba.com/courses)
-- [The Frontend Career Path](https://scrimba.com/fullstack-path-c0fullstack)
-- [Become a Scrimba Pro member](https://scrimba.com/pricing)
+## 📚 What We Learned
 
-Happy Coding!
+1. **Why reusability is important**  
+   We explored how reusable components make our code more maintainable, scalable, and easier to read.
+
+2. **Props**  
+   We used props to pass dynamic data (like images, titles, and descriptions) into our components, allowing them to be reused for multiple destinations.
+
+3. **Creating components from an array of data**  
+   We mapped over an imported array of travel destinations to automatically generate `<Entry />` components, making it simple to add or remove locations without touching the main layout.
+
+---
+
+## 🛠️ Tech Stack
+- **React**
+- **JavaScript (ES6)**
+- **CSS**
+
+---
+
+## 🚀 How It Works
+
+1. Import destination data from a `data.js` file.
+2. Use `.map()` to iterate over the array and render an `<Entry />` component for each location.
+3. Pass each destination’s details via props for dynamic rendering.
