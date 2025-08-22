@@ -2,6 +2,13 @@ import { useState } from "react"
 import { clsx } from "clsx"
 import { languages } from "./languages"
 
+/**
+ * Goal: Allow the user to start guessing the letters
+ * 
+ * Challenge: Only display the correctly-guessed letters
+ * in the word
+ */
+
 export default function AssemblyEndgame() {
     const [currentWord, setCurrentWord] = useState("react")
     const [guessedLetters, setGuessedLetters] = useState([])
@@ -33,7 +40,9 @@ export default function AssemblyEndgame() {
     })
 
     const letterElements = currentWord.split("").map((letter, index) => (
-        <span key={index}>{letter.toUpperCase()}</span>
+        <span key={index}>
+            {guessedLetters.includes(letter) ? letter.toUpperCase() : ""}
+        </span>
     ))
 
     const keyboardElements = alphabet.split("").map(letter => {
@@ -44,8 +53,6 @@ export default function AssemblyEndgame() {
             correct: isCorrect,
             wrong: isWrong
         })
-        
-        console.log(className)
         
         return (
             <button
