@@ -2,19 +2,6 @@ import { useState } from "react"
 import { clsx } from "clsx"
 import { languages } from "./languages"
 
-/**
- * Goal: Add in the incorrect guesses mechanism to the game
- * 
- * Challenge:
- * Conditionally render either the "won" or "lost" statuses
- * from the design, both the text and the styles, based on the
- * new derived variables.
- * 
- * Note: We always want the surrounding `section` to be rendered,
- * so only change the content inside that section. Otherwise the
- * content on the page would jump around a bit too much.
- */
-
 export default function AssemblyEndgame() {
     // State values
     const [currentWord, setCurrentWord] = useState("react")
@@ -82,11 +69,33 @@ export default function AssemblyEndgame() {
             </button>
         )
     })
-    
+
     const gameStatusClass = clsx("game-status", {
         won: isGameWon,
         lost: isGameLost
     })
+
+    function renderGameStatus() {
+        if (!isGameOver) {
+            return null
+        }
+
+        if (isGameWon) {
+            return (
+                <>
+                    <h2>You win!</h2>
+                    <p>Well done! 🎉</p>
+                </>
+            )
+        } else {
+            return (
+                <>
+                    <h2>Game over!</h2>
+                    <p>You lose! Better start learning Assembly 😭</p>
+                </>
+            )
+        }
+    }
 
     return (
         <main>
@@ -97,22 +106,7 @@ export default function AssemblyEndgame() {
             </header>
 
             <section className={gameStatusClass}>
-                {isGameOver ? (
-                    isGameWon ? (
-                        <>
-                            <h2>You win!</h2>
-                            <p>Well done! 🎉</p>
-                        </>
-                    ) : (
-                        <>
-                            <h2>Game over!</h2>
-                            <p>You lose! Better start learning Assembly 😭</p>
-                        </>
-                    )
-                ) : (
-                        null
-                    )
-                }
+                {renderGameStatus()}
             </section>
 
             <section className="language-chips">
