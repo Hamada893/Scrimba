@@ -14,7 +14,9 @@ import { getFarewellText, getRandomWord } from "./utils"
  * - Reveal what the word was if the user loses the game
  * - Confetti drop when the user wins
  * 
- * Challenge: Make the New Game button reset the game
+ * Challenge: Reveal the missing letters of the word if the user
+ * loses the game. Style the missing letters to have the same red
+ * color as the wrong letter keys.
  */
 
 export default function AssemblyEndgame() {
@@ -43,7 +45,7 @@ export default function AssemblyEndgame() {
                 [...prevLetters, letter]
         )
     }
-    
+
     function startNewGame() {
         setCurrentWord(getRandomWord())
         setGuessedLetters([])
@@ -67,11 +69,17 @@ export default function AssemblyEndgame() {
         )
     })
 
-    const letterElements = currentWord.split("").map((letter, index) => (
-        <span key={index}>
-            {guessedLetters.includes(letter) ? letter.toUpperCase() : ""}
-        </span>
-    ))
+    const letterElements = currentWord.split("").map((letter, index) => {
+        const shouldRevealLetter = isGameLost || guessedLetters.includes(letter)
+        const letterClassName = clsx(
+            isGameLost && !guessedLetters.includes(letter) && "missed-letter"
+        )
+        return (
+            <span key={index} className={letterClassName}>
+                {shouldRevealLetter ? letter.toUpperCase() : ""}
+            </span>
+        )
+    })
 
     const keyboardElements = alphabet.split("").map(letter => {
         const isGuessed = guessedLetters.includes(letter)
@@ -118,7 +126,7 @@ export default function AssemblyEndgame() {
                     <p>Well done! 🎉</p>
                 </>
             )
-        } 
+        }
         if (isGameLost) {
             return (
                 <>
@@ -127,7 +135,7 @@ export default function AssemblyEndgame() {
                 </>
             )
         }
-        
+
         return null
     }
 
@@ -139,9 +147,9 @@ export default function AssemblyEndgame() {
                 programming world safe from Assembly!</p>
             </header>
 
-            <section 
-                aria-live="polite" 
-                role="status" 
+            <section
+                aria-live="polite"
+                role="status"
                 className={gameStatusClass}
             >
                 {renderGameStatus()}
@@ -154,33 +162,33 @@ export default function AssemblyEndgame() {
             <section className="word">
                 {letterElements}
             </section>
-            
+
             {/* Combined visually-hidden aria-live region for status updates */}
-            <section 
-                className="sr-only" 
-                aria-live="polite" 
+            <section
+                className="sr-only"
+                aria-live="polite"
                 role="status"
             >
                 <p>
-                    {currentWord.includes(lastGuessedLetter) ? 
-                        `Correct! The letter ${lastGuessedLetter} is in the word.` : 
+                    {currentWord.includes(lastGuessedLetter) ?
+                        `Correct! The letter ${lastGuessedLetter} is in the word.` :
                         `Sorry, the letter ${lastGuessedLetter} is not in the word.`
                     }
                     You have {numGuessesLeft} attempts left.
                 </p>
-                <p>Current word: {currentWord.split("").map(letter => 
-                guessedLetters.includes(letter) ? letter + "." : "blank.")
-                .join(" ")}</p>
-            
+                <p>Current word: {currentWord.split("").map(letter =>
+                    guessedLetters.includes(letter) ? letter + "." : "blank.")
+                    .join(" ")}</p>
+
             </section>
 
             <section className="keyboard">
                 {keyboardElements}
             </section>
 
-            {isGameOver && 
-                <button 
-                    className="new-game" 
+            {isGameOver &&
+                <button
+                    className="new-game"
                     onClick={startNewGame}
                 >New Game</button>}
         </main>
