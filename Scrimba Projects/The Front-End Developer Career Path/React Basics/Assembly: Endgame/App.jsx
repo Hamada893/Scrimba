@@ -1,7 +1,7 @@
 import { useState } from "react"
 import { clsx } from "clsx"
 import { languages } from "./languages"
-import { getFarewellText } from "./utils"
+import { getFarewellText, getRandomWord } from "./utils"
 
 /**
  * Backlog:
@@ -9,16 +9,17 @@ import { getFarewellText } from "./utils"
  * ✅ Farewell messages in status section
  * ✅ Disable the keyboard when the game is over
  * ✅ Fix a11y issues
- * - Choose a random word from a list of words
- * - Make the New Game button reset the game
+ * ✅ Choose a random word from a list of words
+ * ✅ Make the New Game button reset the game
+ * - Reveal what the word was if the user loses the game
  * - Confetti drop when the user wins
  * 
- * Challenge: Disable the keyboard when the game is over
+ * Challenge: Make the New Game button reset the game
  */
 
 export default function AssemblyEndgame() {
     // State values
-    const [currentWord, setCurrentWord] = useState("react")
+    const [currentWord, setCurrentWord] = useState(() => getRandomWord())
     const [guessedLetters, setGuessedLetters] = useState([])
 
     // Derived values
@@ -41,6 +42,11 @@ export default function AssemblyEndgame() {
                 prevLetters :
                 [...prevLetters, letter]
         )
+    }
+    
+    function startNewGame() {
+        setCurrentWord(getRandomWord())
+        setGuessedLetters([])
     }
 
     const languageElements = languages.map((lang, index) => {
@@ -172,7 +178,11 @@ export default function AssemblyEndgame() {
                 {keyboardElements}
             </section>
 
-            {isGameOver && <button className="new-game">New Game</button>}
+            {isGameOver && 
+                <button 
+                    className="new-game" 
+                    onClick={startNewGame}
+                >New Game</button>}
         </main>
     )
 }
