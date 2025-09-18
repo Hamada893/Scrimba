@@ -13,20 +13,33 @@ import HostLayout from "./components/HostLayout"
 
 import "./server"
 
+/**
+ * Challenge: Add the footer to the site! Make a separate Footer component
+ * in the components folder, and just use this as the markup:
+ * 
+ * <footer>&#169; 2022 #VANLIFE</footer>
+ * 
+ * I'm mostly wanting to test your ability to find where the footer would
+ * be added, and don't care too much about getting the styling correct.
+ * But if you feel you need extra CSS practice, feel free to do the styling
+ * as well!
+ * 
+ */
+
 function App() {
   return (
     <BrowserRouter>
       <Routes>
-        <Route element={<Layout />}>
-          <Route path="/" element={<Home />} />
-          <Route path="/about" element={<About />} />
-          <Route path="/vans" element={<Vans />} />
-          <Route path="/vans/:id" element={<VanDetail />} />
+        <Route path="/" element={<Layout />}>
+          <Route index element={<Home />} />
+          <Route path="about" element={<About />} />
+          <Route path="vans" element={<Vans />} />
+          <Route path="vans/:id" element={<VanDetail />} />
           
-          <Route path="/host" element={<HostLayout />}>
-            <Route path="/host" element={<Dashboard />} />
-            <Route path="/host/income" element={<Income />} />
-            <Route path="/host/reviews" element={<Reviews />} />
+          <Route path="host" element={<HostLayout />}>
+            <Route index element={<Dashboard />} />
+            <Route path="income" element={<Income />} />
+            <Route path="reviews" element={<Reviews />} />
           </Route>
         </Route>
       </Routes>
