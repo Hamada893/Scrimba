@@ -2,13 +2,6 @@ import React from "react"
 import { useLocation, useNavigate } from "react-router-dom"
 import { loginUser } from "../api"
 
-/**
- * Challenge: read up on the useNavigate hook from the
- * docs and implement it in the VanLife app. When the user
- * successfully logs in, they should be redirected to the 
- * /host route.
- */
-
 export default function Login() {
     const [loginFormData, setLoginFormData] = React.useState({ email: "", password: "" })
     const [status, setStatus] = React.useState("idle")
@@ -23,7 +16,8 @@ export default function Login() {
         loginUser(loginFormData)
             .then(data => {
                 setError(null)
-                navigate("/host")
+                localStorage.setItem("loggedin", true)
+                navigate("/host", { replace: true })
             })
             .catch(err => {
                 setError(err)
