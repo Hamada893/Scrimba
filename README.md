@@ -38,11 +38,96 @@ The course also introduced powerful intermediate concepts such as closures, Imme
 
 [![Advanced Javascript](Certificates/AdvancedJS.png)](https://scrimba.com/advanced-javascript-c03kpi3kss)
 
+## ⚙️ Advanced React (✅ Completed on 7th February, 2025): 
+Completed on the 7th of February, this comprehensive course provided an in-depth exploration of advanced React concepts essential for building scalable, performant, and maintainable applications. The curriculum was structured into three core sections, each targeting critical aspects of modern React development. 
 
-## 💻 Front-End Developer Career Path (🔃 In Progress):
-Started on the 31st of January, this comprehensive program is designed to build a strong foundation in front-end development, covering HTML, CSS, JavaScript, React, UI/UX principles, accessible web development rules , and much much more. Through a hands-on, project-based approach, this course emphasizes real-world coding challenges, problem-solving, and best practices for modern web development with 31 total projects.
+### 🔄 Reusability
+This section focused on writing DRY (Don't Repeat Yourself) code through custom hooks and component composition. Topics covered included:
+- **Custom Hooks**: Creating reusable stateful logic that can be shared across multiple components
+- **Component Abstraction**: Designing flexible, reusable components with proper prop interfaces
+- **Higher-Order Components (HOCs)**: Understanding composition patterns for cross-cutting concerns
+- **Render Props Pattern**: Implementing flexible component APIs for sharing code between components
 
-Progress includes completing multiple interactive, hand-on projects, such as responsive websites, interactive web apps, and dynamic UI components. These projects not only reinforce key front-end concepts but also provide practical experience in writing clean, maintainable code.
+```jsx
+// Example: Custom Hook for API data fetching
+const useApiData = (url) => {
+  const [data, setData] = useState(null);
+  const [loading, setLoading] = useState(true);
+  
+  useEffect(() => {
+    fetchData(url).then(setData).finally(() => setLoading(false));
+  }, [url]);
+  
+  return { data, loading };
+};
+```
 
-As the journey continues, the goal is to solidify front-end skills, create a polished portfolio, and gain the confidence to work on professional-grade applications. This path serves as a stepping stone toward becoming a well-rounded front-end developer, ready to dive into frameworks like React and beyond. 🚀
+### 🧭 Routing
+A comprehensive deep-dive into React Router, covering navigation patterns and route management:
+- **Basic Navigation**: Implementing `Link` and `NavLink` components for client-side routing
+- **Route Filtering**: Dynamic route handling and conditional rendering based on URL parameters
+- **Nested Routes**: Creating hierarchical route structures for complex application layouts
+- **Protected Routes**: Implementing authentication guards and route-level permissions
+- **Path Parameters & Query Strings**: Extracting and utilizing URL data within components
+- **Programmatic Navigation**: Using `useNavigate` hook for conditional redirects and navigation
 
+```jsx
+// Example: Protected Route Implementation
+const ProtectedRoute = ({ children }) => {
+  const { isAuthenticated } = useAuth();
+  return isAuthenticated ? children : <Navigate to="/login" />;
+};
+
+// Nested Route Structure
+<Routes>
+  <Route path="/dashboard" element={<DashboardLayout />}>
+    <Route index element={<Overview />} />
+    <Route path="analytics" element={<Analytics />} />
+    <Route path="settings" element={<Settings />} />
+  </Route>
+</Routes>
+```
+
+### ⚡ Performance
+Advanced optimization techniques for creating lightning-fast React applications:
+- **React Rendering Cycle**: Understanding how React's reconciliation algorithm works and when components re-render
+- **React Developer Tools**: Profiling components and identifying performance bottlenecks
+- **Code Splitting**: Implementing dynamic imports and lazy loading for reduced bundle sizes
+- **Memoization with `useMemo`**: Optimizing expensive calculations and preventing unnecessary recomputation
+- **Component Memoization with `memo`**: Preventing unnecessary re-renders of functional components
+- **Callback Optimization with `useCallback`**: Stabilizing function references to prevent child re-renders
+
+```jsx
+// Example: Performance Optimization Techniques
+const ExpensiveComponent = memo(({ data, onUpdate }) => {
+  // Memoize expensive calculations
+  const processedData = useMemo(() => {
+    return data.map(item => complexProcessing(item));
+  }, [data]);
+  
+  // Stabilize callback references
+  const handleClick = useCallback((id) => {
+    onUpdate(id);
+  }, [onUpdate]);
+  
+  return <div>{/* Component JSX */}</div>;
+});
+```
+
+The course emphasized practical application of these concepts through hands-on projects, demonstrating how proper React patterns lead to more maintainable codebases and superior user experiences.
+
+[![Advanced React](Certificates/AdvancedReact.png)](https://scrimba.com/advanced-react-c02h)
+
+
+## 💻 Front-End Developer Career Path (✅ Completed):
+
+Started on the 31st of January and completed successfully, this comprehensive career path served as the ultimate front-end development journey, encompassing all essential technologies and methodologies needed to become a professional front-end developer. This intensive program integrated multiple specialized courses into one cohesive learning experience, including the previously completed HTML & CSS, JavaScript, Advanced JavaScript, Advanced React, Accessible Web Development, and UI Design Fundamentals courses - all unified under this comprehensive career path.
+
+The program featured a hands-on, project-based approach with 31 total real-world projects that progressively built expertise across the entire front-end development stack. From foundational concepts like semantic HTML and responsive CSS design to advanced JavaScript programming, React development patterns, accessibility standards, and modern UI/UX principles, this path provided comprehensive coverage of industry-standard practices and cutting-edge techniques.
+
+Key accomplishments included mastering responsive web design, building dynamic interactive applications with vanilla JavaScript, developing complex React applications with advanced patterns like custom hooks and performance optimization, implementing accessible web interfaces that serve all users, and applying professional UI design principles for creating visually appealing and user-friendly interfaces. The curriculum emphasized writing clean, maintainable code, debugging and problem-solving skills, and best practices for modern web development workflows.
+
+This career path represents the culmination of intensive front-end development training, providing the practical experience and theoretical knowledge necessary to work on professional-grade applications. The completion of this comprehensive program marks readiness to enter the front-end development field with confidence, equipped with a robust skill set and an impressive portfolio of projects demonstrating proficiency across all core front-end technologies. 🚀
+
+## Certificate
+[![Front-End Developer Career Path](Certificates/FrontEndDeveloperPath.png)](https://scrimba.com/frontend-path-c0j)
