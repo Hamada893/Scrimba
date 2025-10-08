@@ -1,6 +1,6 @@
 # 📃 About This Repository:
 
-Welcome to the foundational projects repository for Scrimba! This repository serves as a collection of all the hands-on projects completed during various Scrimba courses, providing a comprehensive showcase of the skills and knowledge gained throughout the learning journey. Each project is neatly organized into its own folder, with the folder name reflecting the specific course it was derived from. Whether you're revisiting completed projects, exploring new courses, or seeking inspiration for your own coding journey, this repository aims to be a well-structured and easily navigable resource for all things Scrimba-related.
+Welcome to the foundational projects repository for Scrimba! This repository serves as a collection of all the hands-on projects completed during various Scrimba courses, providing a comprehensive showcase of the skills and knowledge gained throughout the learning journey. Each project is neatly organized into its own folder, with the folder name reflecting the specific course it was derived from.
 
 ## 🚁 Learn HTML & CSS (✅ Completed on 23rd January, 2025): 
 
