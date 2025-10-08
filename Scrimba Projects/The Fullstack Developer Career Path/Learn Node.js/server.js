@@ -6,14 +6,14 @@ const PORT = 8000
 const server = http.createServer(async (req, res) => {
   const destinations = await getDataFromDB()
 
-/*
-Challenge:
-  1. Store our data in a const ‘destinations’.
-  2. When a GET request is received to the ‘/api' endpoint, send our JSON stringified data.
-    Think: What changes will you need to make to get this to work?
-*/
 
   if (req.url === '/api' && req.method === 'GET') {
+/*
+Challenge:
+1. Access the 'statusCode' property and set it to 200.
+*/
+    res.setHeader('Content-Type', 'application/json')
+    res.statusCode = 200
     res.end(JSON.stringify(destinations))
   }
 })
