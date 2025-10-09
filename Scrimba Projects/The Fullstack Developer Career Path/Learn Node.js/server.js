@@ -8,17 +8,19 @@ const PORT = 8000
 const server = http.createServer(async (req, res) => {
   const destinations = await getDataFromDB()
 
-/*
-Challenge:
-  1. Create a util function to filter data.
-  2. Wire it up and delete unneeded code.
-*/
+  const urlObj = new URL(req.url, `http://${req.headers.host}`)
+
+  const queryObj = Object.fromEntries(urlObj.searchParams)
 
 
+  if (urlObj.pathname === '/api' && req.method === 'GET') {
+    
+    let filteredDestinations = destinations
 
-  if (req.url === '/api' && req.method === 'GET') {
+    console.log(queryObj)
+    // update filteredDestinations
 
-    sendJSONResponse(res, 200, destinations)
+    sendJSONResponse(res, 200, filteredDestinations)
 
   } else if (req.url.startsWith('/api/continent') && req.method === 'GET') {
 
