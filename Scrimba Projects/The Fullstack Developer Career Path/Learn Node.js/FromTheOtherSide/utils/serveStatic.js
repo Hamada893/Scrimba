@@ -20,22 +20,12 @@ export async function serveStatic(req, res, baseDir) {
     sendResponse(res, 200, contentType, content)
 
   } catch (err) {
-    if (err.code === 'ENOENT') {
+    if (err.code === 'ENOENT') { 
       const content = await fs.readFile(path.join(publicDir, '404.html'))
       sendResponse(res, 404, 'text/html', content)
     } else {
       sendResponse(res, 500, 'text/html', '<html><h1>Server Error: ${err.code}</h1></html>')
     }
-/*
-Challenge:
-
- If the error code is “ENOENT”, serve the 404.html page.  
- If there’s another error, serve a 500 with this string: 
- `<html><h1>Server Error: ${err.code}</h1></html>`. 
-
-The Content-Type for the 500 can be ‘text/html’.
-*/
-    console.log(err.code)
   }
 
 }
