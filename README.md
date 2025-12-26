@@ -119,7 +119,7 @@ The course emphasized practical application of these concepts through hands-on p
 [![Advanced React](Certificates/AdvancedReact.png)](https://scrimba.com/advanced-react-c02h)
 
 
-## 💻 Front-End Developer Career Path (✅ Completed):
+## 💻 Front-End Developer Career Path (✅ Completed on 28th September, 2025):
 
 Started on the 31st of January and completed successfully, this comprehensive career path served as the ultimate front-end development journey, encompassing all essential technologies and methodologies needed to become a professional front-end developer. This intensive program integrated multiple specialized courses into one cohesive learning experience, including the previously completed HTML & CSS, JavaScript, Advanced JavaScript, Advanced React, Accessible Web Development, and UI Design Fundamentals courses - all unified under this comprehensive career path.
 
@@ -131,3 +131,155 @@ This career path represents the culmination of intensive front-end development t
 
 ## Certificate
 [![Front-End Developer Career Path](Certificates/FrontEndDeveloperPath.png)](https://scrimba.com/frontend-path-c0j)
+
+### The Fullstack Developer Career Path (✅ Completed on 23rd December, 2025)
+**Duration:** 108.4 hours | **Lessons:** 1922
+
+## Certificate
+[![Fullstack Developer Career Path](Certificates/FullstackDeveloperPath.png)](https://scrimba.com/fullstack-path-c0fullstack)
+
+### Learn TypeScript (✅ Completed on 21st December, 2025)
+
+## Certificate
+[![Learn Typescript](Certificates/LearnTypescript.png)](https://scrimba.com/learn-typescript-c03c)
+
+A comprehensive introduction to TypeScript and its integration with popular frameworks.
+
+#### Fundamentals
+- Basic, literal, and custom types
+- Optional properties
+- Union types
+- Type narrowing
+- Utility types
+- Generics
+
+#### TypeScript in React
+- Typing state management
+- Typing React components and props
+- Creating custom prop types
+- Working with imported types
+
+#### TypeScript in Express
+- Setting up Express with TypeScript
+- Typing routes during creation
+
+---
+
+### Learn Next.js (✅ Completed on 23rd December, 2025)
+
+## Certificate
+[![Learn Next js](Certificates/LearnNextjs.png)](https://scrimba.com/learn-nextjs-c02moisq6a)
+
+Modern React framework for production-grade applications with server-side rendering and static site generation.
+
+#### Fundamentals
+- Manual and automatic project setup
+- File-based routing system
+- Nested routes
+- Layout components
+- Optimizing images and fonts
+- Client and server components
+- Dynamic routes
+
+#### Rendering Strategies
+- `usePathname` hook and active dynamic link styling
+- Client components with `use client` directive
+- Rendering strategies:
+  - Static rendering
+  - Dynamic rendering
+  - Incremental Static Regeneration (ISR)
+- Search params implementation
+- Next.js Form component and its advantages over vanilla React forms
+
+---
+
+### Fullstack Developer Career Path
+**Duration:** 108 hours | **Lessons:** 1,922
+
+A comprehensive full-stack development curriculum covering backend technologies, databases, AI integration, and testing practices. This section highlights topics beyond the Front-end Developer Career Path.
+
+#### AI Engineering
+
+**Fundamentals:**
+- OpenAI API integration
+- Understanding tokens, requests, and dependencies
+- Prompt engineering techniques:
+  - Temperature control
+  - Stop sequences
+  - Presence penalty
+  - Frequency penalty
+
+**AI Agents:**
+- Prompt engineering and chain of thought reasoning
+- Building agents with OpenAI functions
+- OpenAI automatic function calling capability
+- Interactive agent chatbot UI development
+
+#### Learn Node.js
+
+**Fundamentals:**
+- Core HTTP module
+- Creating servers and sending status codes
+- Setting headers
+- Handling requests and responses
+- Filtering data
+- Extracting query parameters
+
+**Building Fullstack APIs:**
+- File System (FS) module for reading and writing files
+- Path module for creating file/directory paths
+- Serving static assets
+- Input sanitization
+
+#### Databases
+
+**Fundamentals:**
+- SQL query language fundamentals
+- CRUD operations (Create, Read, Update, Delete)
+- Conditional statements
+- Different types of JOIN operations
+
+#### Express.js
+
+**Fundamentals (Building an Express API):**
+- Server creation
+- Status code management
+- Setting headers
+- Request/response handling
+- Data filtering
+- Path and query parameter extraction
+- CORS configuration
+
+**Building Fullstack Express Apps:**
+- Middleware implementation
+- Serving static files
+- Database creation and seeding
+- Database retrieval operations
+- SQL queries and parameter binding
+
+#### Testing
+
+**Fundamentals:**
+- Testing concepts and methodology
+- Test organization and typing
+- Testing user interactions
+- Mocking external services
+- Code coverage analysis
+- Accessibility testing
+- Test-Driven Development (TDD)
+- Different types of testing (unit, integration, end-to-end)
+
+**Tools & Libraries:**
+- Vitest
+- React Testing Library
+- Mock Service Worker (MSW)
+
+---
+
+## 📜 Certificates
+
+All course completion certificates are stored in the `Certificates/` directory.
+
+---
+
+**Note:** This repository represents continuous learning and skill development in modern web development technologies through the Scrimba platform.
